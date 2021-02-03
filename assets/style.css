@@ -1,0 +1,14 @@
+header {
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.searchBtn {
+  border: 1px solid lightblue;
+  border-radius: 4px;
+  background-color:blue;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
