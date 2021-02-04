@@ -15,21 +15,31 @@
       <div class="row">
         <div class="col-4">
           <label>Search for a City:</label>
-          <div class="row">
-            <div class="col-7 input-group mb-3">
-              <input type="text" class="col-10 form-control" placeholder="">
-              <div class="col-2 searchBtn"></div>
-            </div>
-            <div class="col-7" id="city-names"></div>
-              <button data-id="4671654" class="btn">Austin</button>
+          <div class="input-group mb-3">
+            <input type="text" class="col-10 form-control" placeholder="">
+            <div class="col-2 searchBtn"></div>
           </div>
+          <div id="city-names">
+            <div data-lat="30.267151" data-lon="-97.743057" data-id="4671654" class="city" id="austin">Austin</div>
+            <div data-lat="41.850029" data-lon="-87.650047" data-id="4887398" class="city" id="chicago">Chicago</div>
+            <div data-lat="40.714272" data-lon="-74.005966" data-id="5128638" class="city" id="new-york">New York</div>
+            <div data-lat="28.53834" data-lon="-81.379242" data-id="4167147" class="city" id="orlando">Orlando</div>
+            <div data-lat="37.774929" data-lon="-122.419418" data-id="5391959" class="city" id="san-francisco">San Francisco</div>
+            <div data-lat="47.606209" data-lon="-122.332069" data-id="5809844" class="city" id="seattle">Seattle</div>
+            <div data-lat="39.739151" data-lon="-104.984703" data-id="5419384" class="city" id="denver">Denver</div>
+            <div data-lat="33.749001" data-lon="-84.387978," data-id="4180439" class="city" id="atlanta">Atlanta</div>
+          </div>
+
+
         </div>
-        <div class="col-8">
-          <div class="row">
-            <div class="col-11" id="dash">
-              <h1 id="place"></h1>
-            </div>
-          </div>
+        <div class="col-8" id="dash">
+          <h1 id="place">Choose a City to see weather</h1>
+          <h3 id="temp">Temperature: </h3>
+          <h3 id="humid">Humidity: </h3>
+          <h3 id="wind">Wind Speed: </h3>
+          <h3 id="uv">UV Index: </h3>
+          <h3></h3>
+        </div>
           <div class="row">
             <div class="col-12" id="5day"></div>
           </div>

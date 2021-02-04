@@ -12,3 +12,12 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.city {
+  border:2px solid black;
+  text-align: center;
+}
+
+#dash {
+  float:right;
+}
