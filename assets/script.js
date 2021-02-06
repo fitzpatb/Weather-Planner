@@ -6,11 +6,18 @@ var humidEl = document.querySelector("#humid");
 var windEl = document.querySelector("#wind");
 var uvEl = document.querySelector("#uv");
 
-var cityObject = JSON.parse(localStorage.getItem('city'))
+
+var cityObject = JSON.parse(localStorage.getItem('city'));
+var nameObject = JSON.parse(localStorage.getItem('name'));
+var indexObject = JSON.parse(localStorage.getItem('index'));
 if (!cityObject) {
   placeEl.textContent = 'Choose a City to see weather';
 } else {
-  placeEl.textContent = cityObject.placeEl;
+  placeEl.textContent = nameObject.name;
+  tempEl.textContent = "Temperature: " + cityObject.temp + "\u00B0F";
+  humidEl.textContent = "Humidity: " + cityObject.humidity + "%";
+  windEl.textContent = "Wind Speed: " + cityObject.wind + " MPH";
+  uvEl.textContent = "UV Index: " + indexObject.uv;
 }
 var getCityCord = function (event) {
   var cityLat = event.target.getAttribute('data-lat');
@@ -89,10 +96,39 @@ var getUv = function (cityLat, cityLon) {
 
     })
 }
-
-
 cityNames.addEventListener("click", getCityCord);
 cityNames.addEventListener("click", getCityName);
+
+
+var searchBtnEl = $(".searchBtn");
+
+var searchEl = $("#search");
+
+
+searchBtnEl.on("click", function () {
+  var query = searchEl.val();
+  console.log(query);
+  var apiSearch = "https://api.openweathermap.org/data/2.5/forecast?q=" + query + "&appid=9057e02af26cff387f193be4d1eee3ae";
+
+  fetch(apiSearch)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      var cityLat = data.city.coord.lat;
+      var cityLon = data.city.coord.lon;
+      console.log(data.city.coord.lat);
+      if (cityLat && cityLon) {
+        getCityTemp(cityLat, cityLon);
+        getUv(cityLat, cityLon);
+      } else {
+        alert("error cant find lon and lat");
+      }
+    })
+});
+
+
 
 
 
