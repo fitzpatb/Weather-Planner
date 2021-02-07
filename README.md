@@ -5,3 +5,5 @@ For this assignment we were tasked with making a weather planner. What I did was
 Once you search the local storage saves all searches and rht e previous search. You can view the weather temp and humidity.
 
 ![screen-gif](./assets/images/site.gif);
+
+ https://fitzpatb.github.io/Weather-Planner/
