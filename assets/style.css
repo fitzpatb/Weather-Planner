@@ -5,9 +5,10 @@ header {
   padding-bottom: 5px;
 }
 .searchBtn {
-  border: 1px solid lightblue;
+  border: 2px solid lightblue;
   border-radius: 4px;
-  background-color:blue;
+  background-color: blue;
+  background-image:url("./images/search.png");
   color: white;
   background-repeat: no-repeat;
   background-position: center;
@@ -18,6 +19,34 @@ header {
   text-align: center;
 }
 
-#dash {
+.column {
+  display:inline-block;
+  width: 17%;
+  margin-right:5px;
+}
 
+.card {
+  background-color: blue;
+  color: white;
+}
+
+.city {
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top:1px;
+  margin-left: 5px;
+}
+#dash {
+  margin-top: 10px;
+  border: 2px solid gray;
+}
+
+#label, .input-group{
+  margin-left: 5px;
+}
+
+#uv {
+  background-color: red;
 }

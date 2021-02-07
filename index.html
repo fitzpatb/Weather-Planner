@@ -13,10 +13,12 @@
     </header>
     <main>
       <div class="row">
-        <div class="col-4">
-          <label>Search for a City:</label>
+        <div class="col-3">
+          <label id="label">Search for a City:</label>
           <div class="input-group mb-3">
-            <input type="text" class="col-10 form-control" id="search" placeholder="city">
+            <input list="searchHist" type="text" class="col-10 form-control" id="search" placeholder="city">
+            <datalist id="searchHist">
+            </datalist>
             <div class="col-2 searchBtn"></div>
           </div>
           <div id="city-names">
@@ -27,32 +29,79 @@
             <div data-lat="37.774929" data-lon="-122.419418" data-id="5391959" class="city" id="san-francisco">San Francisco</div>
             <div data-lat="47.606209" data-lon="-122.332069" data-id="5809844" class="city" id="seattle">Seattle</div>
             <div data-lat="39.739151" data-lon="-104.984703" data-id="5419384" class="city" id="denver">Denver</div>
-            <div data-lat="33.749001" data-lon="-84.387978," data-id="4180439" class="city" id="atlanta">Atlanta</div>
+            <div data-lat="33.749001" data-lon="-84.387978" data-id="4180439" class="city" id="atlanta">Atlanta</div>
           </div>
 
 
         </div>
-        <div class="col-8">
-          <div class="col-8" id="dash">
+        <div class="col-9">
+          <div class="col-11" id="dash">
             <h1 id="place"></h1>
-            <h3 id="temp">Temperature: </h3>
-            <h3 id="humid">Humidity: </h3>
-            <h3 id="wind">Wind Speed: </h3>
-            <h3 id="uv">UV Index: </h3>
-            <h3></h3>
+            <h4 id="temp">Temperature: </h4>
+            <h4 id="humid">Humidity: </h4>
+            <h4 id="wind">Wind Speed: </h4>
+            <h4 class="col-3" id="uv">UV Index: </h4>
+            <h4></h4>
           </div>
-          <div class="col-8">
-            <div class="col-12" id="5day">
-              <h2>5-Day Forecast:</h2>
+          <div class="col-12">
+            <h2>5-Day Forecast:</h2>
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title" id="dayOne">5-Day</h5>
+
+                    <p class="card-text" id="tempOne">Temp: </p>
+                    <p class="card-text" id="humidOne">Humidity: </p>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title" id="dayTwo">5-Day</h5>
+
+                    <p class="card-text" id="tempTwo">Temp: </p>
+                    <p class="card-text" id="humidTwo">Humidity: </p>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title" id="dayThree">5-Day</h5>
+                    <p class="card-text" id="tempThree">Temp: </p>
+                    <p class="card-text" id="humidThree">Humidity: </p>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title" id="dayFour">5-Day</h5>
+                    <p class="card-text" id="tempFour">Temp: </p>
+                    <p class="card-text" id="humidFour">Humidity: </p>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title" id="dayFive">5-Day</h5>
+                    <p class="card-text" id="tempFive">Temp: </p>
+                    <p class="card-text" id="humidFive">Humidity: </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
     </main>
-  </body>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="assets/script.js"></script>
-  <script type="text/javascript">
-  </script>
+  </body>
 </html>
